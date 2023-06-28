@@ -30,9 +30,9 @@ pool.getConnection().catch(() => {
 const models = {};
 
 const PhoneManager = require("./phoneManager");
-const StateManager = require("./StateManager");
-const RamManager = require("./RamManager");
-const MemoryManager = require("./MemoryManager");
+const StateManager = require("./stateManager");
+const RamManager = require("./ramManager");
+const MemoryManager = require("./memoryManager");
 
 models.phone = new PhoneManager();
 models.phone.setDatabase(pool);
