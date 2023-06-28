@@ -33,6 +33,22 @@ const PhoneManager = require("./PhoneManager");
 
 models.phone = new PhoneManager();
 models.phone.setDatabase(pool);
+
+const StateManager = require("./StateManager");
+
+models.state = new StateManager();
+models.state.setDatabase(pool);
+
+const MemoryManager = require("./MemoryManager");
+
+models.memory = new MemoryManager();
+models.memory.setDatabase(pool);
+
+const RamManager = require("./RamManager");
+
+models.ram = new RamManager();
+models.ram.setDatabase(pool);
+
 // bonus: use a proxy to personalize error message,
 // when asking for a non existing model
 
