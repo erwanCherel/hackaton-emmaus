@@ -5,13 +5,13 @@ export default function Footer() {
     <Flex
       bg="brand.bleu"
       color="brand.gris"
-      padding="2rem 1rem"
+      padding={{ base: "1rem", xl: "2rem" }}
       fontWeight="bold"
       lineHeight="2.5rem"
-      flexDirection={{ base: "column", md: "row" }}
+      flexDirection={{ base: "column", xl: "row" }}
       justify={{ base: "", md: "space-around" }}
       align="center"
-      height={{ base: "163px", md: "96px" }}
+      mt="2rem"
     >
       <Flex>Mentions légales</Flex>
       <Flex>Politique de confidentialité</Flex>

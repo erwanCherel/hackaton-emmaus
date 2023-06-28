@@ -19,7 +19,7 @@ const theme = extendTheme(
       },
     },
     fonts: {
-      body: "Adamina, sans-serif",
+      body: `'Poppins', sans-serif`,
     },
     styles: {
       global: () => ({
