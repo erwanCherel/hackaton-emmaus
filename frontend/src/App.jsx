@@ -1,13 +1,26 @@
-import Home from "./pages/Home";
+import { Routes, Route } from "react-router-dom";
+
+import { Stack } from "@chakra-ui/react";
+import AddPhones from "./pages/AddPhone";
+import DatabasePhones from "./pages/DatabasePhones";
 
 import "./App.css";
+import Home from "./pages/Home";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-      <p>coucou</p>
-    </div>
+    <Stack id="app">
+      <Header />
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/add-phone" element={<AddPhones />} />
+        <Route path="/database-phones" element={<DatabasePhones />} />
+        <Route path="/*" element={<Home />} />
+      </Routes>
+      <Footer />
+    </Stack>
   );
 }
 
