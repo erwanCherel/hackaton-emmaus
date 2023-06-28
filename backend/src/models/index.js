@@ -29,10 +29,13 @@ pool.getConnection().catch(() => {
 
 const models = {};
 
-const PhoneManager = require("./phoneManager");
+const PhoneManager = require("./PhoneManager");
+
 const StateManager = require("./stateManager");
 const RamManager = require("./ramManager");
 const MemoryManager = require("./memoryManager");
+
+const UserManager = require("./UserManager");
 
 models.phone = new PhoneManager();
 models.phone.setDatabase(pool);
@@ -42,6 +45,8 @@ models.ram = new RamManager();
 models.ram.setDatabase(pool);
 models.memory = new MemoryManager();
 models.memory.setDatabase(pool);
+models.user = new UserManager();
+models.user.setDatabase(pool);
 
 // bonus: use a proxy to personalize error message,
 // when asking for a non-existing model
