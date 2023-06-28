@@ -10,9 +10,9 @@ class PhoneManager extends AbstractManager {
       `insert into ${this.table} (name,
           marque,
           os,
-          picture
+          picture)
          values (?, ?, ?, ?)`,
-      [phone.name, phone.marque, phone.os, phone.picture, phone.id]
+      [phone.name, phone.marque, phone.os, phone.picture]
     );
   }
 

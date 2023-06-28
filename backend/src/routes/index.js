@@ -1,6 +1,7 @@
 const router = require("express").Router();
-const itemsRouter = require("./items.routes");
 
-router.use("/items", itemsRouter);
+const phonesRouter = require("./phones.routes");
+
+router.use("/phones", phonesRouter);
 
 module.exports = router;
