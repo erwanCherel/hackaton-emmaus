@@ -7,14 +7,17 @@ class RamManager extends AbstractManager {
 
   insert(ram) {
     return this.database.query(
-      `INSERT INTO ${this.table} (value, points2) VALUES (?, ?)`,
+      `insert into ${this.table} (value,
+          points2
+          )
+         values (?, ?)`,
       [ram.value, ram.points2]
     );
   }
 
   update(ram) {
     return this.database.query(
-      `UPDATE ${this.table} SET value = ?, points2 = ? WHERE id = ?`,
+      `update ${this.table} set value = ?, points2 = ? where id = ?`,
       [ram.value, ram.points2, ram.id]
     );
   }

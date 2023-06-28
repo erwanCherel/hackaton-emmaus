@@ -31,9 +31,11 @@ const models = {};
 
 const PhoneManager = require("./PhoneManager");
 
-const StateManager = require("./stateManager");
-const RamManager = require("./ramManager");
-const MemoryManager = require("./memoryManager");
+const StateManager = require("./StateManager");
+
+const RamManager = require("./RamManager");
+
+const MemoryManager = require("./MemoryManager");
 
 const UserManager = require("./UserManager");
 

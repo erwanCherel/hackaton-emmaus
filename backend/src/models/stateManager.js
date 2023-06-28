@@ -7,14 +7,17 @@ class StateManager extends AbstractManager {
 
   insert(state) {
     return this.database.query(
-      `INSERT INTO ${this.table} (name, weighting) VALUES (?, ?)`,
+      `insert into ${this.table} (name,
+          weighting
+          )
+         values (?, ?)`,
       [state.name, state.weighting]
     );
   }
 
   update(state) {
     return this.database.query(
-      `UPDATE ${this.table} SET name = ?, weighting = ? WHERE id = ?`,
+      `update ${this.table} set name = ?, weighting = ? where id = ?`,
       [state.name, state.weighting, state.id]
     );
   }

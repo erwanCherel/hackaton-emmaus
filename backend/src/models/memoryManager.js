@@ -7,14 +7,16 @@ class MemoryManager extends AbstractManager {
 
   insert(memory) {
     return this.database.query(
-      `INSERT INTO ${this.table} (parametreGo, points) VALUES (?, ?)`,
+      `insert into ${this.table} (parametreGo,
+          points)
+         values (?, ?)`,
       [memory.parametreGo, memory.points]
     );
   }
 
   update(memory) {
     return this.database.query(
-      `UPDATE ${this.table} SET parametreGo = ?, points = ? WHERE id = ?`,
+      `update ${this.table} set parametreGo = ?, points = ? where id = ?`,
       [memory.parametreGo, memory.points, memory.id]
     );
   }
