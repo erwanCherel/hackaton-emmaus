@@ -17,6 +17,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/add-phone" element={<AddPhones />} />
         <Route path="/database-phones" element={<DatabasePhones />} />
+        <Route path="/*" element={<Home />} />
       </Routes>
       <Footer />
     </Stack>

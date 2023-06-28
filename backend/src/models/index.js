@@ -29,7 +29,7 @@ pool.getConnection().catch(() => {
 
 const models = {};
 
-const PhoneManager = require("./PhoneManager");
+const PhoneManager = require("./phoneManager");
 
 models.phone = new PhoneManager();
 models.phone.setDatabase(pool);
