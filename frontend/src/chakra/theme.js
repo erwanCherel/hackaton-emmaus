@@ -12,10 +12,12 @@ const theme = extendTheme(
   {
     colors: {
       brand: {
-        100: "#FFFFFF",
-        200: "#7E72F2",
-        300: "#BEE3F8",
-        400: "#D6BCFA",
+        bleu: "#002743",
+        rose: "#E62460",
+        vert: "#00ACB0",
+        jaune: "#FFCC38",
+        gris: "#EBEBEB",
+        black: "#000000",
       },
     },
     fonts: {
