@@ -1,15 +1,17 @@
 import { Routes, Route } from "react-router-dom";
+
+import "./App.css";
+import { Stack } from "@chakra-ui/react";
+import AddPhones from "./pages/AddPhone";
+import DatabasePhones from "./pages/DatabasePhones";
+
 import Home from "./pages/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import "./App.css";
-import AddPhones from "./pages/AddPhone";
-import DatabasePhones from "./pages/DatabasePhones";
-
 function App() {
   return (
-    <div className="App">
+    <Stack justify="space-between" height="100vh">
       <Header />
       <Routes>
         <Route path="/home" element={<Home />} />
@@ -17,7 +19,7 @@ function App() {
         <Route path="/database-phones" element={<DatabasePhones />} />
       </Routes>
       <Footer />
-    </div>
+    </Stack>
   );
 }
 
