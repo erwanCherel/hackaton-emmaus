@@ -31,26 +31,21 @@ const models = {};
 
 const PhoneManager = require("./PhoneManager");
 
+const StateManager = require("./stateManager");
+const RamManager = require("./ramManager");
+const MemoryManager = require("./memoryManager");
+
 models.phone = new PhoneManager();
 models.phone.setDatabase(pool);
-
-const StateManager = require("./StateManager");
-
 models.state = new StateManager();
 models.state.setDatabase(pool);
-
-const MemoryManager = require("./MemoryManager");
-
+models.ram = new RamManager();
+models.ram.setDatabase(pool);
 models.memory = new MemoryManager();
 models.memory.setDatabase(pool);
 
-const RamManager = require("./RamManager");
-
-models.ram = new RamManager();
-models.ram.setDatabase(pool);
-
 // bonus: use a proxy to personalize error message,
-// when asking for a non existing model
+// when asking for a non-existing model
 
 const handler = {
   get(obj, prop) {

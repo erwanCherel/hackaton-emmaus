@@ -1,3 +1,8 @@
 body {
   margin: 0;
 }
+
+#app {
+  justify-content: space-between;
+  min-height: 100vh;
+}

@@ -50,13 +50,17 @@ export default function Header() {
           </Button>
         </NavLink>
       </Box>
-      <Box mr="5" position="absolute" right="0" color="brand.bleu">
+      <Box
+        mr="5"
+        right="0"
+        color="brand.bleu"
+        display={{ base: "initial", sm: "none" }}
+      >
         <Menu>
           <MenuButton
             as={IconButton}
             aria-label="Options"
             icon={<HamburgerIcon />}
-            display={{ base: "initial", sm: "none" }}
           />
           <MenuList>
             <NavLink to="/login">
