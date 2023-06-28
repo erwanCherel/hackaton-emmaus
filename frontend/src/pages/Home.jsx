@@ -15,7 +15,6 @@ export default function Home() {
   return (
     <Stack flexDirection={{ base: "column", md: "row" }} maxW="1440px" m="auto">
       <Box
-        // bg="red"
         m={{ base: "2rem", md: "auto 3rem" }}
         maxW={{ md: "50%", xl: "40%" }}
       >
@@ -46,9 +45,6 @@ export default function Home() {
       </Box>
       <Flex flexDir="column" mr={{ md: "2rem" }}>
         <Image
-          // position={{ xl: "absolute" }}
-          // right={{ md: "-20", xl: "10" }}
-          // bottom="24"
           m={{ base: "auto", xl: "auto auto -4rem" }}
           src={handHome}
           maxHeight={{ base: "200px", md: "400px", xl: "700px" }}
