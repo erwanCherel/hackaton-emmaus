@@ -1,7 +1,7 @@
-export default function Home() {
+export default function AddPhones() {
   return (
     <header className="App-header">
-      <h1>Home</h1>
+      <h1>AddPhone</h1>
     </header>
   );
 }
