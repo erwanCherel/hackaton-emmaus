@@ -11,7 +11,6 @@ export default function Footer() {
       flexDirection={{ base: "column", xl: "row" }}
       justify={{ base: "", md: "space-around" }}
       align="center"
-      mt="2rem"
     >
       <Flex>Mentions légales</Flex>
       <Flex>Politique de confidentialité</Flex>

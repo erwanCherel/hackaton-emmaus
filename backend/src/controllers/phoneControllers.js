@@ -82,10 +82,40 @@ const destroy = (req, res) => {
     });
 };
 
+const filterBrand = (req, res) => {
+  const brand = req.params.marque;
+
+  models.phone
+    .findByBrand(brand)
+    .then(([rows]) => {
+      res.send(rows);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
+const filterMemory = (req, res) => {
+  const memory = req.params.parametreGo;
+
+  models.phone
+    .findByMemory(memory)
+    .then(([rows]) => {
+      res.send(rows);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.sendStatus(500);
+    });
+};
+
 module.exports = {
   browse,
   read,
   edit,
   add,
   destroy,
+  filterBrand,
+  filterMemory,
 };

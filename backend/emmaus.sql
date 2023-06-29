@@ -17,9 +17,9 @@ LOCK TABLES `phone` WRITE;
 INSERT INTO
   `phone`
 VALUES
-  (1, "Iphone6", "Apple", "ios", "..."),
-  (2, "Samsung A51", "Samsung", "androïd", "..."),
-  (3, "Pixel 7a", "Google", "androïd", "...");
+  (1, "Iphone 6", "Apple", "ios", "https://www.refurbished.fr/cache/images/refurbished-iphone-6-silver_600x600_BGresize_16777215-tj.png"),
+  (2, "Samsung A51", "Samsung", "androïd", "https://m.media-amazon.com/images/I/81B0H50DSPL.jpg"),
+  (3, "Pixel 7a", "Google", "androïd", "https://m.media-amazon.com/images/I/51tVQZ8XCxL._AC_UF894,1000_QL80_.jpg");
 
 UNLOCK TABLES;
 
