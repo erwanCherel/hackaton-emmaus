@@ -5,4 +5,5 @@ body {
 #app {
   justify-content: space-between;
   min-height: 100vh;
+  gap: 0;
 }

@@ -1,4 +1,5 @@
 import { Flex } from "@chakra-ui/react";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -11,11 +12,37 @@ export default function Footer() {
       flexDirection={{ base: "column", xl: "row" }}
       justify={{ base: "", md: "space-around" }}
       align="center"
-      mt="2rem"
+      // mt="2rem"
     >
-      <Flex>Mentions légales</Flex>
-      <Flex>Politique de confidentialité</Flex>
-      <Flex>© Emmaüs Connect avec LaCollecte.tech</Flex>
+      <Flex
+        _hover={{
+          textDecoration: "underline",
+        }}
+      >
+        <NavLink to="/home">Mentions légales</NavLink>
+      </Flex>
+
+      <Flex
+        _hover={{
+          textDecoration: "underline",
+        }}
+      >
+        <NavLink to="/home">Politique de confidentialité</NavLink>
+      </Flex>
+      <Flex
+        _hover={{
+          textDecoration: "underline",
+        }}
+      >
+        <NavLink to="/faq">FAQ</NavLink>
+      </Flex>
+      <Flex
+        _hover={{
+          textDecoration: "underline",
+        }}
+      >
+        <NavLink to="/home">© Emmaüs Connect avec LaCollecte.tech</NavLink>
+      </Flex>
     </Flex>
   );
 }
