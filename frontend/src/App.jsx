@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Authentication from "./pages/Authentication";
+import RetailPhone from "./pages/RetailPhone";
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/add-phone" element={<AddPhones />} />
         <Route path="/database-phones" element={<DatabasePhones />} />
+        <Route path="/retail-phone/:id" element={<RetailPhone />} />
         <Route path="/login" element={<Authentication />} />
-        <Route path="/*" element={<Home />} />
+        {/* <Route path="/*" element={<Home />} /> */}
       </Routes>
       <Footer />
     </Stack>

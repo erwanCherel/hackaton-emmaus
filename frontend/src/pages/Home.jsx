@@ -12,6 +12,7 @@ import handHome from "../assets/handHome.png";
 
 export default function Home() {
   const navigate = useNavigate();
+
   return (
     <Stack flexDirection={{ base: "column", md: "row" }} maxW="1440px" m="auto">
       <Box
