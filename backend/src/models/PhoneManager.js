@@ -40,6 +40,18 @@ class PhoneManager extends AbstractManager {
       [parametreGo]
     );
   }
+
+  findByPhoneId(phoneId) {
+    return this.database.query(
+      `SELECT p.id, p.name, p.marque, p.os, p.picture, m.parametreGo, r.value
+    FROM phone p
+    JOIN memory_state_ram msr ON p.id = msr.phone_id
+    JOIN memory m ON msr.memory_id = m.id
+    JOIN ram r ON msr.ram_id = r.id where p.id = ?`,
+      [phoneId]
+    );
+  }
 }
 
+// `SELECT r.id, r.title FROM ${this.table} AS r INNER JOIN nursery_reglement AS nr ON r.id  = nr.reglement_id WHERE nr.nursery_id= ?`,
 module.exports = PhoneManager;

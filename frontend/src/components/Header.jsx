@@ -14,6 +14,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { NavLink } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 import { useUserContext } from "../contexts/UserContext";
+import logo from "../assets/logo.svg";
 
 export default function Header() {
   const { user } = useUserContext();
@@ -30,7 +31,7 @@ export default function Header() {
       <Box>
         <NavLink to="/home">
           <Image
-            src="src/assets/logo.svg"
+            src={logo}
             w={{ base: "20", md: "32" }}
             h={{ base: "20", md: "32" }}
             ml={{ base: "4", sm: "3", md: "4" }}

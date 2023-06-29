@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import Authentication from "./pages/Authentication";
 import Faq from "./pages/Faq";
 import PrivateRoutes from "./components/PrivateRoutes";
+import RetailPhone from "./pages/RetailPhone";
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
             <Route path="/add-phone" element={<AddPhones />} />
             <Route path="/database-phones" element={<DatabasePhones />} />
           </Route>
-          <Route path="/*" element={<Home />} />
+          <Route path="/retail-phone/:id" element={<RetailPhone />} />
+          {/* <Route path="/*" element={<Home />} /> */}
         </Routes>
         <Footer />
       </Stack>
