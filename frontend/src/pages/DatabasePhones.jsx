@@ -219,7 +219,7 @@ export default function PhonesList() {
               </CardBody>
               <Divider />
               <CardFooter>
-                <NavLink to="/retail-phone">
+                <NavLink to={`/retail-phone/${phone.id}`}>
                   <Button bg="color.gris">Details</Button>
                 </NavLink>
               </CardFooter>
