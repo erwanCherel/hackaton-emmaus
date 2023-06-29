@@ -8,12 +8,17 @@ import {
   MenuItem,
   MenuButton,
   IconButton,
+  Icon,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { NavLink } from "react-router-dom";
+import { FaUserCircle } from "react-icons/fa";
+import { useUserContext } from "../contexts/UserContext";
 import logo from "../assets/logo.svg";
 
 export default function Header() {
+  const { user } = useUserContext();
+
   return (
     <Flex
       align="center"
@@ -33,22 +38,38 @@ export default function Header() {
           />
         </NavLink>
       </Box>
-      <Box display={{ base: "none", sm: "initial" }} color="brand.bleu">
-        <Flex gap="4em">
-          <NavLink to="/add-phone">Ajouter un smartphone</NavLink>
-          <NavLink to="/database-phones">Base de données</NavLink>
-        </Flex>
-      </Box>
+      {user && (
+        <Box display={{ base: "none", sm: "initial" }} color="brand.bleu">
+          <Flex gap="4em">
+            <NavLink to="/add-phone">Ajouter un smartphone</NavLink>
+            <NavLink to="/database-phones">Base de données</NavLink>
+            <NavLink to="/faq">FAQ</NavLink>
+          </Flex>
+        </Box>
+      )}
       <Box>
         <NavLink to="/login">
-          <Button
-            display={{ base: "none", sm: "initial" }}
-            size={{ base: "xs", sm: "sm", md: "lg" }}
-            mr="5"
-            color="brand.bleu"
-          >
-            Se connecter
-          </Button>
+          {user ? (
+            <Icon
+              as={FaUserCircle}
+              boxSize={{ base: "2rem", md: "3.5rem" }}
+              mr={{ base: "1rem", xl: "2rem" }}
+              display={{ base: "none", sm: "initial" }}
+              color="brand.bleu"
+            />
+          ) : (
+            <Button
+              display={{ base: "none", sm: "initial" }}
+              size={{ base: "xs", sm: "sm", md: "lg" }}
+              mr="5"
+              color="brand.gris"
+              bg="brand.rose"
+              borderRadius="100rem"
+              boxShadow="md"
+            >
+              Se connecter
+            </Button>
+          )}
         </NavLink>
       </Box>
       <Box

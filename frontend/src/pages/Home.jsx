@@ -9,8 +9,10 @@ import {
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import handHome from "../assets/handHome.png";
+import { useUserContext } from "../contexts/UserContext";
 
 export default function Home() {
+  const { user } = useUserContext();
   const navigate = useNavigate();
 
   return (
@@ -31,18 +33,33 @@ export default function Home() {
           des personnes exclues, en leur offrant les opportunités et les outils
           nécessaires pour s'épanouir dans le monde numérique.
         </Text>
-        <Button
-          display={{ base: "none", xl: "initial" }}
-          fontWeight="extrabold"
-          w="300px"
-          h="60px"
-          bg="brand.vert"
-          borderRadius="100rem"
-          color="brand.gris"
-          onClick={() => navigate("/add-phone")}
-        >
-          Ajouter un smartphone
-        </Button>
+        {user ? (
+          <Button
+            display={{ base: "none", xl: "initial" }}
+            fontWeight="extrabold"
+            w="300px"
+            h="60px"
+            bg="brand.vert"
+            borderRadius="100rem"
+            color="brand.gris"
+            onClick={() => navigate("/add-phone")}
+          >
+            Ajouter un smartphone
+          </Button>
+        ) : (
+          <Button
+            display={{ base: "none", xl: "initial" }}
+            fontWeight="extrabold"
+            w="300px"
+            h="60px"
+            bg="brand.vert"
+            borderRadius="100rem"
+            color="brand.gris"
+            onClick={() => navigate("/login")}
+          >
+            Se connecter
+          </Button>
+        )}
       </Box>
       <Flex flexDir="column" mr={{ md: "2rem" }}>
         <Image
@@ -53,7 +70,7 @@ export default function Home() {
         <Button
           w={{ base: "240px", md: "350px" }}
           h={{ base: "60px", md: "80px" }}
-          m={{ base: "-1rem auto auto", md: "-3rem auto auto" }}
+          m={{ base: "-1rem auto 2rem", md: "-3rem auto auto" }}
           bg="brand.vert"
           borderRadius="100rem"
           color="brand.gris"
