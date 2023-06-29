@@ -7,9 +7,7 @@ class MemoryManager extends AbstractManager {
 
   insert(memory) {
     return this.database.query(
-      `insert into ${this.table} (parametreGo,
-          points)
-         values (?, ?)`,
+      `insert into ${this.table} (parametreGo, points) values (?, ?)`,
       [memory.parametreGo, memory.points]
     );
   }
